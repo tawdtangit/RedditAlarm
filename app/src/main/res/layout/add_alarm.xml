@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_name"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:singleLine="true"
+                android:lines="1"
+                android:hint="Name" />
+
+            <com.example.todd.redditalarm.CustomTimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker"
+                android:layout_gravity="center_horizontal"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:nestedScrollingEnabled="false"
+                android:timePickerMode="clock"
+                android:touchscreenBlocksFocus="false"
+                android:transitionGroup="false" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Subreddit"
+                android:id="@+id/choose_sub" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <ToggleButton
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="S"
+                    android:id="@+id/Sunday"
+                    android:textOn="S"
+                    android:textOff="S"
+                    />
+
+
+                <ToggleButton
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:text="M"
+                    android:id="@+id/Monday"
+                    android:textOn="M"
+                    android:textOff="M" />
+                <ToggleButton
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="T"
+                    android:id="@+id/Tuesday"
+                    android:textOn="T"
+                    android:textOff="T" />
+                <ToggleButton
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="W"
+                    android:id="@+id/Wednesday"
+                    android:textOn="W"
+                    android:textOff="W"
+                    />
+                <ToggleButton
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="T"
+                    android:id="@+id/Thursday"
+                    android:textOn="T"
+                    android:textOff="T"
+                    />
+                <ToggleButton
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="F"
+                    android:id="@+id/Friday"
+                    android:textOn="F"
+                    android:textOff="F"
+                    />
+                <ToggleButton
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="S"
+                    android:id="@+id/Saturday"
+                    android:textOn="S"
+                    android:textOff="S"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Alarm Tone"
+                android:id="@+id/alarm_tone"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:weightSum="1">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/volCtrl"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.96" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:id="@+id/volumeDisplay"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="normal"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Add New Alarm"
+                android:id="@+id/create" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

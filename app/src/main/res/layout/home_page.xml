@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextClock
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_clock"
+        android:layout_weight="0.10"
+        android:gravity="center_vertical|center_horizontal"
+        android:fontFamily="sans-serif"
+        android:textSize="60sp"
+        android:paddingTop="20dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/subreddit_posts"
+        tools:listitem="@android:layout/simple_expandable_list_item_1" />
+
+
+</LinearLayout>
